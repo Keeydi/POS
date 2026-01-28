@@ -22,18 +22,18 @@
         @include('layouts.navigation')
 
         <!-- Main Content Area -->
-        <div class="flex-1 flex flex-col overflow-hidden ml-64">
+        <div class="flex-1 flex flex-col overflow-hidden ml-64 h-screen">
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow-sm border-b border-gray-200">
-                    <div class="px-6 py-4">
+                <header class="bg-white shadow-sm border-b border-gray-200 flex-shrink-0">
+                    <div class="px-6 py-3">
                         {{ $header }}
                     </div>
                 </header>
             @endif
 
             <!-- Page Content -->
-            <main class="flex-1 overflow-hidden bg-gray-100">
+            <main class="flex-1 overflow-hidden bg-gray-100 min-h-0">
                 {{ $slot }}
             </main>
         </div>

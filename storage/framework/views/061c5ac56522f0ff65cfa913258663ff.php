@@ -51,11 +51,11 @@ unset($__defined_vars); ?>
         <?php echo $__env->make('layouts.navigation', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
         <!-- Main Content Area -->
-        <div class="flex-1 flex flex-col overflow-hidden ml-64">
+        <div class="flex-1 flex flex-col overflow-hidden ml-64 h-screen">
             <!-- Page Heading -->
             <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(isset($header)): ?>
-                <header class="bg-white shadow-sm border-b border-gray-200">
-                    <div class="px-6 py-4">
+                <header class="bg-white shadow-sm border-b border-gray-200 flex-shrink-0">
+                    <div class="px-6 py-3">
                         <?php echo e($header); ?>
 
                     </div>
@@ -63,7 +63,7 @@ unset($__defined_vars); ?>
             <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
             <!-- Page Content -->
-            <main class="flex-1 overflow-hidden bg-gray-100">
+            <main class="flex-1 overflow-hidden bg-gray-100 min-h-0">
                 <?php echo e($slot); ?>
 
             </main>
